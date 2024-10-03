@@ -12,8 +12,8 @@ loginRouter.post('/', async (request, response) => {
     : await bcrypt.compare(password, user.passwordHash)
 
   if (!(user && passwordCorrect)) {
-    //return response.status(401).json({
-    return response.status(401).set('Access-Control-Allow-Origin', '*').json({
+    return response.status(401).json({
+    //return response.status(401).set('Access-Control-Allow-Origin', '*').json({
       error: 'invalid username or password'
     })
   }
@@ -31,6 +31,7 @@ loginRouter.post('/', async (request, response) => {
   )
 
   response
+    .set('Access-Control-Allow-Origin', '*')
     .status(200)
     .send({ token, username: user.username, name: user.name })
 })
