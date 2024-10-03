@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Say Yes",
+    "author": "Liz Stanley",
+    "url": "https://sayyes.com/",
+    "likes": 0
+}

@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Jeps",
+    "author": "Aku Ankka",
+    "url": "https://ihanhuuhaata",
+    "userId": "63d24dca04f6112ac43d4e9a"
+}
