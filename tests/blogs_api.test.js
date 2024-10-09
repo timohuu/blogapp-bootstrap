@@ -14,9 +14,9 @@ var token = ''
 
 const config = require('../utils/config')
 // eslint-disable-next-line no-console
-console.log('connecting to', config.MONGODB_URI)
+console.log('config.MONGODB_URI = ', config.MONGODB_URI)
 // eslint-disable-next-line no-console
-console.log('connecting to', config.SECRET)
+console.log('config.SECRET = ', config.SECRET)
 
 beforeEach(async () => {
   await Blog.deleteMany({})

@@ -36,6 +36,12 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
+      - name: env parameters1
+        run: echo "MONGODB_URI = ${{env.CONDITION_SKIP}}"
+      - name: env parameters2
+        run: echo "SECRET = ${{env.SECRET}}"
+      - name: env parameters3
+        run: echo "secrets.MONGODB_URI = ${{ secrets.MONGODB_URI }}"
       - name: lint
         run: npm run eslint
       #- name: build
