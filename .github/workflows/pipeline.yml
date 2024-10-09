@@ -10,8 +10,8 @@ on:
 
 env:
   CONDITION_SKIP: ${{ contains(join(github.event.commits.*.message), '#skip') }}
-  MONGODB_URI: ${{ secrets.MONGODB_URI }}
-  SECRET: ${{ secrets.SECRET }}
+  #MONGODB_URI: ${{ secrets.MONGODB_URI }}
+  #SECRET: ${{ secrets.SECRET }}
 
 jobs:
   skipping_delivery_and_tagging:
@@ -36,20 +36,20 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
-      - name: env parameters1
-        run: echo "MONGODB_URI = ${{env.MONGODB_URI}}"
-      - name: env parameters2
-        run: echo "SECRET = ${{env.SECRET}}"
-      - name: env parameters3
-        run: echo "secrets.MONGODB_URI = ${{ secrets.MONGODB_URI }}"
+      #- name: env parameters1
+      #  run: echo "MONGODB_URI = ${{env.MONGODB_URI}}"
+      #- name: env parameters2
+      #  run: echo "SECRET = ${{env.SECRET}}"
+      #- name: env parameters3
+      #  run: echo "secrets.MONGODB_URI = ${{ secrets.MONGODB_URI }}"
       - name: lint
         run: npm run eslint
       #- name: build
       #  run: npm run build
       - name: test
-        env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          SECRET: ${{ secrets.SECRET }}
+        #env:
+        #  MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        #  SECRET: ${{ secrets.SECRET }}
         run: npm run test
       #- name: e2e tests
       #  uses: cypress-io/github-action@v5
