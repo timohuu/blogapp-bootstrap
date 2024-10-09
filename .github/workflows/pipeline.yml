@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: env parameters1
-        run: echo "MONGODB_URI = ${{env.CONDITION_SKIP}}"
+        run: echo "MONGODB_URI = ${{env.MONGODB_URI}}"
       - name: env parameters2
         run: echo "SECRET = ${{env.SECRET}}"
       - name: env parameters3
@@ -47,6 +47,9 @@ jobs:
       #- name: build
       #  run: npm run build
       - name: test
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          SECRET: ${{ secrets.SECRET }}
         run: npm run test
       #- name: e2e tests
       #  uses: cypress-io/github-action@v5
