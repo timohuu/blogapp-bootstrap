@@ -28,6 +28,7 @@ jobs:
         run: echo "delivery and tagging going ahead"
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
+    environment: blogapp-bootstrap-env
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
