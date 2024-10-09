@@ -7,7 +7,7 @@ loginRouter.post('/', async (request, response) => {
   const { username, password } = request.body
 
   // eslint-disable-next-line no-console
-  console.log('username: ', username, '/password: ', password)
+  //console.log('username: ', username, '/password: ', password)
 
   const user = await User.findOne({ username })
   const passwordCorrect = user === null
