@@ -12,6 +12,12 @@ const User = require('../models/user')
 
 var token = ''
 
+const config = require('./utils/config')
+// eslint-disable-next-line no-console
+console.log('connecting to', config.MONGODB_URI)
+// eslint-disable-next-line no-console
+console.log('connecting to', config.SECRET)
+
 beforeEach(async () => {
   await Blog.deleteMany({})
   await Blog.insertMany(helper.initialBlogs)
