@@ -1,4 +1,10 @@
 module.exports = {
+  //'settings': {
+  //'react': {
+  //'version': 'detect',
+  //version: 'latest', // instead of 'detect'
+  //},
+  //},
   'env': {
     'browser': true,
     'es6': true,
