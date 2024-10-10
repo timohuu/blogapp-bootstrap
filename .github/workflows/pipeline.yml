@@ -10,9 +10,9 @@ on:
 
 env:
   CONDITION_SKIP: ${{ contains(join(github.event.commits.*.message), '#skip') }}
-  #MONGODB_URI: ${{ secrets.MONGODB_URI }}
-  #TEST_MONGODB_URI: ${{ secrets.MONGODB_URI }}
-  #SECRET: ${{ secrets.SECRET }}
+  MONGODB_URI: ${{ secrets.MONGODB_URI }}
+  TEST_MONGODB_URI: ${{ secrets.MONGODB_URI }}
+  SECRET: ${{ secrets.SECRET }}
 
 jobs:
   skipping_delivery_and_tagging:

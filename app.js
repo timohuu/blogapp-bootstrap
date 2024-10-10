@@ -14,13 +14,9 @@ logger.info('connecting to', config.MONGODB_URI)
 mongoose.connect(config.MONGODB_URI)
   .then(() => {
     logger.info('connected to MongoDB')
-    // eslint-disable-next-line no-console
-    //console.log('connected to MongoDB: ', config.MONGODB_URI)
   })
   .catch((error) => {
     logger.error('error connection to MongoDB:', error.message)
-    // eslint-disable-next-line no-console
-    //console.log('error connection to MongoDB:', error.message)
   })
 
 app.use(express.json())
