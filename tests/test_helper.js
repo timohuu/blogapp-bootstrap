@@ -14,45 +14,6 @@ const initialUsers = [
   }
 ]
 
-/*const initialBlogs = [
-  {
-    title: 'Say Yes',
-    author: 'Liz Stanley',
-    url: 'https://sayyes.com/',
-    likes: 0
-  },
-  {
-    title: 'Seth\'s Blog',
-    author: 'Seth Godin',
-    url: 'https://seths.blog/',
-    likes: 0
-  },
-  {
-    title: 'Bright Bazaar',
-    author: 'Will Taylor',
-    url: 'https://www.brightbazaarblog.com/',
-    likes: 0
-  },
-  {
-    title: 'Megan the Vegan Mom',
-    author: 'Megan Vegan',
-    url: 'https://www.megantheveganmom.com/',
-    likes: 0
-  },
-  {
-    title: 'Rookie Moms',
-    author: 'Rookie Moms',
-    url: 'https://www.rookiemoms.com/',
-    likes: 0
-  },
-  {
-    title: 'Tech Savvy Mama',
-    author: 'Leticia',
-    url: 'https://techsavvymama.com/',
-    likes: 0
-  }
-]*/
-
 const initialBlogs = [
   {
     title: 'Say Yes',

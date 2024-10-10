@@ -12,11 +12,11 @@ const User = require('../models/user')
 
 var token = ''
 
-const config = require('../utils/config')
+//const config = require('../utils/config')
 // eslint-disable-next-line no-console
-console.log('config.MONGODB_URI = ', config.MONGODB_URI)
+//console.log('config.MONGODB_URI = ', config.MONGODB_URI)
 // eslint-disable-next-line no-console
-console.log('process.env.SECRET = ', process.env.SECRET)
+//console.log('process.env.SECRET = ', process.env.SECRET)
 //console.log('config.SECRET = ', config.SECRET)
 
 beforeEach(async () => {
@@ -146,9 +146,13 @@ describe('add blogs with token', () => {
       .expect('Content-Type', /application\/json/)
 
     expect(result.body.error).toContain('token missing or invalid')
+    // eslint-disable-next-line no-console
+    console.log('result.body.error = ', result.body.error)
 
     const blogsAtEnd = await helper.blogsInDb()
     expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length)
+    // eslint-disable-next-line no-console
+    console.log('blogsAtEnd = ', blogsAtEnd)
 
     expect(blogsAtEnd).not.toEqual(expect.arrayContaining([expect.objectContaining(newBlog)]))
   })
