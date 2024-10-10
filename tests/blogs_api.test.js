@@ -147,12 +147,12 @@ describe('add blogs with token', () => {
 
     expect(result.body.error).toContain('token missing or invalid')
     // eslint-disable-next-line no-console
-    console.log('result.body.error = ', result.body.error)
+    //console.log('result.body.error = ', result.body.error)
 
     const blogsAtEnd = await helper.blogsInDb()
     expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length)
     // eslint-disable-next-line no-console
-    console.log('blogsAtEnd = ', blogsAtEnd)
+    //console.log('blogsAtEnd = ', blogsAtEnd)
 
     expect(blogsAtEnd).not.toEqual(expect.arrayContaining([expect.objectContaining(newBlog)]))
   })
