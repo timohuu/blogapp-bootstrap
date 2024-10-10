@@ -22,6 +22,10 @@ mongoose.connect(config.MONGODB_URI)
 app.use(express.json())
 app.use(cors())
 
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
 // forwarding certain paths to the frontend
 app.use(express.static('frontend/build'))
 app.use('/blogs/:id', express.static('frontend/build'))

@@ -37,12 +37,6 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
-      #- name: env parameters1
-      #  run: echo "MONGODB_URI = ${{env.MONGODB_URI}}"
-      #- name: env parameters2
-      #  run: echo "SECRET = ${{env.SECRET}}"
-      #- name: env parameters3
-      #  run: echo "secrets.MONGODB_URI = ${{ secrets.MONGODB_URI }}"
       - name: lint
         run: npm run eslint
       #- name: build
@@ -100,12 +94,3 @@ jobs:
         uses: anothrNick/github-tag-action@1.70.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #check_deployed_service_URL:
-  #  needs: [simple_deployment_pipeline]
-  #  runs-on: ubuntu-20.04
-  #  steps:
-  #    - name: Check the deployed service URL
-  #      uses: jtalk/url-health-check-action@v4
-  #      with:
-  #        # Check the following URLs one by one sequentially
-  #        url: https://full-stack-open-pokedex-19aa.onrender.com
